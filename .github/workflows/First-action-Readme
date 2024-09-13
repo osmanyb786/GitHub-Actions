@@ -1,0 +1,35 @@
+Step 1: Commit the Workflow
+To start, we'll create a commit, which means saving the workflow file and adding it to our repository.
+
+Keep in mind:
+
+The workflow file is part of your project's code.
+It resides in a specific folder inside your repository (i.e., .github/workflows/).
+By committing the workflow file, we're adding it to our project, which is an important step.
+Note: GitHub Actions workflows are treated as part of your code. They are defined in YAML files inside your Git repository and are not external configurations.
+
+Step 2: Viewing the Workflow in GitHub Actions
+Once the workflow is added, navigate to the Actions tab in your GitHub repository. The tab’s appearance will change, showing an overview of past workflow runs (as they happen).
+
+You’ll notice:
+
+GitHub automatically identifies workflows by scanning the .github/workflows/ folder and reading the YAML files it finds there.
+The first workflow you added will appear with the name you gave it, and if the workflow has a workflow_dispatch trigger, you can run it manually by clicking the Run workflow button.
+Step 3: Running the Workflow
+To run the workflow:
+
+Click the Run workflow button. You’ll be asked to select the branch (e.g., main) you want to run the workflow on.
+GitHub will begin executing the workflow, and you can monitor its progress in the Actions tab.
+A yellow dot will appear, indicating the workflow is currently running.
+Once it finishes, a green checkmark will confirm it executed successfully.
+Step 4: Analyzing the Workflow Run
+You can click on the workflow run to view more details:
+
+GitHub will show the specific job that was executed. In this case, it's the only job defined in the workflow.
+Clicking on the job will reveal the different steps, including:
+Setup: This is automatically executed by GitHub to prepare the runner system.
+Cleanup: GitHub performs cleanup tasks after the workflow is complete.
+Your defined steps: In this case, we defined two steps – "Print greeting" and "Print goodbye." You’ll see the commands that were executed and their results.
+Step 5: Re-running the Workflow
+You can run the workflow as many times as you like. Simply go back to the Actions tab, select the workflow, and trigger it again. Each time, you can monitor and review the details of the execution.
+
